@@ -21,6 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".all_bill_manu_2" />
+        <activity android:name=".calculate_bill_3" />
+
+
+
+
     </application>
 
 </manifest>

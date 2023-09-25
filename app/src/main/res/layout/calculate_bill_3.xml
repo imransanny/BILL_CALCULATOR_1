@@ -1,6 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="396dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="16dp"
+        android:background="#D1CFD8"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="296dp"
+        android:layout_height="43dp"
+        android:background="#364181"
+        android:gravity="center"
+        android:text="Choose Your Area"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="115dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home" />
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar1"
+        android:layout_width="395dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="36dp"
+        android:background="#D1CFD8"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="296dp"
+        android:layout_height="43dp"
+        android:background="#364181"
+        android:gravity="center"
+        android:text="Choose Your Area"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar1"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.913" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="115dp"
+        android:layout_height="77dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar1"
+        app:layout_constraintVertical_bias="0.391"
+        app:srcCompat="@drawable/home" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar2"
+        android:layout_width="404dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="36dp"
+        android:background="#D1CFD8"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar1"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar1" />
+
+    <EditText
+        android:layout_width="254dp"
+        android:layout_height="52dp"
+        android:hint="Enter Your Meter Reading"
+        android:padding="30dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar2"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="196dp"
+        android:layout_height="60dp"
+        android:background="#4A5DCF"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:text="Calculate"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar2"
+        app:layout_constraintVertical_bias="0.356" />
+
+    <ImageButton
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/home"
+        android:scaleType="fitCenter"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <ImageButton
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/settig"
+        android:scaleType="fitCenter"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:layout_constraintLeft_toRightOf="@+id/button"
+        app:layout_constraintRight_toLeftOf="@+id/button3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <ImageButton
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/noti"
+        android:scaleType="fitCenter"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        app:layout_constraintLeft_toRightOf="@+id/button2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
