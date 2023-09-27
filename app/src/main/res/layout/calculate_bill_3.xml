@@ -7,8 +7,10 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
-        android:layout_width="396dp"
+        android:layout_width="match_parent"
         android:layout_height="148dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_marginTop="16dp"
         android:background="#D1CFD8"
         android:minHeight="?attr/actionBarSize"
@@ -21,7 +23,9 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="296dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_height="43dp"
         android:background="#364181"
         android:gravity="center"
@@ -51,7 +55,9 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar1"
-        android:layout_width="395dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_height="157dp"
         android:layout_marginTop="36dp"
         android:background="#D1CFD8"
@@ -62,11 +68,13 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="296dp"
+        android:layout_width="match_parent"
         android:layout_height="43dp"
         android:background="#364181"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:gravity="center"
-        android:text="Choose Your Area"
+        android:text="Select Meter category"
         android:textAlignment="center"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar1"
@@ -94,7 +102,9 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar2"
-        android:layout_width="404dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_height="81dp"
         android:layout_marginTop="36dp"
         android:background="#D1CFD8"
@@ -104,10 +114,13 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar1" />
 
     <EditText
-        android:layout_width="254dp"
-        android:layout_height="52dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
         android:hint="Enter Your Meter Reading"
         android:padding="30dp"
+        android:gravity="center"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar2"
         app:layout_constraintEnd_toEndOf="@+id/materialToolbar2"
