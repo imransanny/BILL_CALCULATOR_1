@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:gravity="center"
-        android:text="WELCOME"
+        android:text="@string/welcome"
         android:textColor="@color/black"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -24,49 +24,70 @@
 
     <ImageView
         android:id="@+id/welcome_logo_1"
-        android:layout_width="124dp"
+        android:layout_width="match_parent"
         android:layout_height="131dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
         android:layout_marginTop="44dp"
-        android:layout_marginEnd="32dp"
         android:src="@drawable/event"
         app:layout_constraintEnd_toEndOf="@+id/welcome_id_1"
         app:layout_constraintLeft_toLeftOf="@+id/welcome_id_1"
+        app:layout_constraintStart_toStartOf="@+id/welcome_id_1"
         app:layout_constraintTop_toBottomOf="@+id/welcome_id_1" />
 
     <TextView
         android:id="@+id/welcome_logo_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:padding="10dp"
         android:text="Bill Calculator"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/welcome_logo_1"
-        app:layout_constraintHorizontal_bias="0.218"
-        app:layout_constraintLeft_toLeftOf="@+id/welcome_id_1"
         app:layout_constraintStart_toStartOf="@+id/welcome_logo_1"
         app:layout_constraintTop_toBottomOf="@+id/welcome_logo_1" />
 
     <TextView
         android:id="@+id/select_language"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
         android:layout_marginTop="80dp"
-        android:layout_marginEnd="32dp"
         android:background="#C8BDBD"
         android:gravity="center"
         android:padding="10dp"
         android:text=" select Language "
         android:textColor="@color/black"
-        android:textSize="40sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/welcome_logo_2"
-        app:layout_constraintHorizontal_bias="0.427"
+
+        app:layout_constraintHorizontal_bias="0.316"
         app:layout_constraintStart_toStartOf="@+id/welcome_logo_2"
         app:layout_constraintTop_toBottomOf="@+id/welcome_logo_2" />
+
+    <ImageView
+        android:id="@+id/select_language_drop_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:src="@drawable/drop"
+        app:layout_constraintEnd_toEndOf="@+id/select_language"
+        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintStart_toStartOf="@+id/select_language"
+        app:layout_constraintTop_toTopOf="@+id/select_language" />
+
+
+    />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
