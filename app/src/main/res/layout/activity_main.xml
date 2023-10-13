@@ -13,7 +13,7 @@
         android:textSize="50dp"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:text="Hello Guys lets start our new journey!"
+        android:text="test"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
