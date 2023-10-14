@@ -60,23 +60,23 @@
         app:layout_constraintTop_toBottomOf="@+id/c_electric_bill_id" />
 
     <!-- ImageViews are positioned relative to their respective TextViews -->
+
+
     <TextView
         android:id="@+id/bill_menu_2_add_id"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="add"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:layout_marginTop="20dp"
 
         app:layout_constraintHeight_percent="0.4"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/online_payment_id" />
-
-
 
     <ImageView
         android:id="@+id/imageView_waterbill"
@@ -146,18 +146,19 @@
         app:srcCompat="@drawable/event" />
 
     <!-- ... Other components ... -->
+
     <ImageButton
-        android:id="@+id/button"
+        android:id="@+id/home_page2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/home"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
         android:scaleType="fitCenter"
-    android:background="?android:attr/selectableItemBackgroundBorderless"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toLeftOf="@+id/button2"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintHeight_percent="0.1"/>
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/button2" />
 
     <ImageButton
         android:id="@+id/button2"
@@ -166,7 +167,7 @@
         android:src="@drawable/settig"
         android:scaleType="fitCenter"
     android:background="?android:attr/selectableItemBackgroundBorderless"
-    app:layout_constraintLeft_toRightOf="@+id/button"
+    app:layout_constraintLeft_toRightOf="@+id/home_page2"
     app:layout_constraintRight_toLeftOf="@+id/button3"
     app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_percent="0.1"/>

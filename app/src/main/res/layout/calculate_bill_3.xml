@@ -21,23 +21,38 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <TextView
-        android:id="@+id/textView2"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+
         android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="43dp"
-        android:background="#364181"
-        android:gravity="center"
-        android:text="Choose Your Area"
-        android:textAlignment="center"
-        android:textColor="@color/white"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.4" >
+
+        <AutoCompleteTextView
+            android:id="@+id/choose_you_area_id_test"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#364181"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="choose your area"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -66,31 +81,40 @@
         app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
-    <TextView
-        android:id="@+id/textView4"
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+
         android:layout_width="match_parent"
-        android:layout_height="43dp"
-        android:background="#364181"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="center"
-        android:text="Select Meter category"
-        android:textAlignment="center"
-        android:textColor="@color/white"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="@+id/materialToolbar1"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.913" />
+        app:layout_constraintVertical_bias="0.913" >
+
+        <AutoCompleteTextView
+            android:id="@+id/catagori_id_test"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#364181"
+            android:gravity="center"
+            android:inputType="none"
+            android:text="choose your area"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="115dp"
         android:layout_height="77dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -114,10 +138,12 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar1" />
 
     <EditText
+        android:id="@+id/enter_your_meter_reading_id"
         android:layout_width="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:hint="Enter Your Meter Reading"
         android:padding="30dp"
         android:gravity="center"
@@ -128,7 +154,7 @@
         app:layout_constraintTop_toTopOf="@+id/materialToolbar2" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/calculate_bill_id"
         android:layout_width="196dp"
         android:layout_height="60dp"
         android:background="#4A5DCF"
@@ -147,17 +173,18 @@
         app:layout_constraintVertical_bias="0.356" />
 
     <ImageButton
-        android:id="@+id/button"
+
+        android:id="@+id/home_page3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/home"
-        android:scaleType="fitCenter"
         android:background="?android:attr/selectableItemBackgroundBorderless"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/button2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintHeight_percent="0.1"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/button2" />
 
     <ImageButton
         android:id="@+id/button2"
@@ -166,7 +193,7 @@
         android:src="@drawable/settig"
         android:scaleType="fitCenter"
         android:background="?android:attr/selectableItemBackgroundBorderless"
-        app:layout_constraintLeft_toRightOf="@+id/button"
+        app:layout_constraintLeft_toRightOf="@+id/home_page3"
         app:layout_constraintRight_toLeftOf="@+id/button3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHeight_percent="0.1"/>

@@ -1,6 +1,23 @@
 <resources>
     <string name="app_name">BILL_CALCULATOR_1</string>
     <string name="welcome">WELCOME</string>
+    
+    
+    <string-array name="meter_area">
+
+        <item>Dhaka</item>
+        <item>CTG</item>
+        <item>Comilla</item>
+        <item>Sylhet</item>
+    </string-array>
+    
+    <string-array name="meter_catagory">
+
+        <item> Abashik </item>
+        <item> Commerial </item>
+        <item> Business </item>
+
+    </string-array>
 
 
 </resources>
