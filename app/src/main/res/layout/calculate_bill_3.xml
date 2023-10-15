@@ -83,8 +83,9 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/textInputLayout"
 
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar1"
@@ -92,11 +93,12 @@
         app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/materialToolbar1"
-        app:layout_constraintVertical_bias="0.913" >
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar1">
 
         <AutoCompleteTextView
             android:id="@+id/catagori_id_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:background="#364181"
@@ -104,9 +106,7 @@
             android:inputType="none"
             android:text="choose your area"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:textColor="@color/white" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -127,10 +127,11 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar2"
         android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="36dp"
+        android:layout_height="162dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:background="#D1CFD8"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -138,20 +139,40 @@
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar1" />
 
     <EditText
-        android:id="@+id/enter_your_meter_reading_id"
+        android:id="@+id/enter_your_New_meter_reading_id"
         android:layout_width="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:hint="Enter Your Meter Reading"
-        android:padding="30dp"
         android:gravity="center"
+        android:hint="Enter Your New Meter Reading"
+        android:inputType="number"
+        android:padding="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar2"
-        app:layout_constraintEnd_toEndOf="@+id/materialToolbar2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/materialToolbar2" />
+        app:layout_constraintEnd_toEndOf="@+id/enter_your_meter_reading_id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/enter_your_meter_reading_id"
+        app:layout_constraintTop_toBottomOf="@+id/enter_your_meter_reading_id"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/enter_your_meter_reading_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Enter Your OLD Meter Reading"
+        android:inputType="number"
+        android:padding="20dp"
+        android:textColor="#000000"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar2"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar1"
+        app:layout_constraintVertical_bias="0.322" />
 
     <TextView
         android:id="@+id/calculate_bill_id"
@@ -159,18 +180,18 @@
         android:layout_height="60dp"
         android:background="#4A5DCF"
         android:gravity="center"
-        android:textSize="25sp"
         android:text="Calculate"
         android:textAlignment="center"
         android:textColor="@color/white"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar2"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintVertical_bias="0.201" />
 
     <ImageButton
 

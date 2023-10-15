@@ -29,12 +29,13 @@ public class calculate_bill_3 extends AppCompatActivity {
     ArrayAdapter<String>adapterItem1;
 
 
-    EditText enter_meter_readding;
+    EditText enter_old_meter_readding, enter_new_meter_readding;
+
     TextView calculate_bill_id ;
     ImageButton home_page_3;
 
 
-    double total_bill, dhaka_abashik = 15.18, dhaka_commerial=42.00;
+    double total_bill, dhaka_abashik = 15.18, dhaka_commerial=42.00,total_meter_reading;
 
 
 
@@ -51,7 +52,8 @@ public class calculate_bill_3 extends AppCompatActivity {
         autoCompleteTextView1 = findViewById(R.id.catagori_id_test);
         home_page_3=  findViewById( R.id.home_page3);
 
-        enter_meter_readding = findViewById(R.id.enter_your_meter_reading_id);
+        enter_old_meter_readding = findViewById(R.id.enter_your_meter_reading_id);
+        enter_new_meter_readding = findViewById( R.id.enter_your_New_meter_reading_id);
         calculate_bill_id = findViewById(R.id.calculate_bill_id);
         calculate_bill_id.setOnClickListener(view -> calculte());
         home_page_3.setOnClickListener( view -> home_p_3());
@@ -92,7 +94,8 @@ public class calculate_bill_3 extends AppCompatActivity {
     }
 
     private void calculte() {
-        String enteredMeterReading = enter_meter_readding.getText().toString().trim();
+        String enteredMeterReading = enter_old_meter_readding.getText().toString().trim();
+
         double enteredMeterReading1 = 0; // default value
 
         try {
@@ -103,8 +106,25 @@ public class calculate_bill_3 extends AppCompatActivity {
             Toast.makeText(this, "Please enter a valid meter reading.", Toast.LENGTH_SHORT).show();
             return; // Exit the method early.
         }
-
         System.out.println(enteredMeterReading);
+
+        String enteredMeterReading1_NEW = enter_new_meter_readding.getText().toString().trim();
+        double enteredMeterReading11_NEW = 0; // default value
+
+        try {
+            enteredMeterReading11_NEW = Double.parseDouble(enteredMeterReading1_NEW);
+        } catch (NumberFormatException e) {
+            // Handle the case where the string isn't a valid double.
+            // For example, show an error message to the user.
+            Toast.makeText(this, "Please enter a valid meter reading.", Toast.LENGTH_SHORT).show();
+            return; // Exit the method early.
+        }
+        System.out.println(enteredMeterReading11_NEW);
+
+        total_meter_reading = (enteredMeterReading11_NEW - enteredMeterReading1);
+
+
+
 
         String itemCategory = autoCompleteTextView.getText().toString();
         if (Arrays.asList(item).contains(itemCategory)) {
@@ -124,14 +144,14 @@ public class calculate_bill_3 extends AppCompatActivity {
             //System.out.println("YSS");
 
             if(selectedCategory.equals("Abashik")){
-                total_bill =  dhaka_abashik *  enteredMeterReading1;
+                total_bill =  dhaka_abashik *  (enteredMeterReading11_NEW - enteredMeterReading1);
                 System.out.println(total_bill);
 
             }else if (selectedCategory.equals("Commerial")){
-                total_bill =  dhaka_commerial *  enteredMeterReading1;
+                total_bill =  dhaka_commerial *  (enteredMeterReading11_NEW - enteredMeterReading1);
                 System.out.println(total_bill);
             }else if (selectedCategory.equals("Business")){
-                total_bill =  dhaka_commerial *  enteredMeterReading1;
+                total_bill =  dhaka_commerial *  (enteredMeterReading11_NEW - enteredMeterReading1);
                 System.out.println(total_bill);
             }
         }
@@ -139,7 +159,7 @@ public class calculate_bill_3 extends AppCompatActivity {
         Intent i = new Intent(getApplicationContext(), display_water_bill_4.class);
 
         i.putExtra("total_bill_page3", String.valueOf(total_bill));
-        i.putExtra("total_unit_page3",enteredMeterReading);
+        i.putExtra("total_unit_page3",String.valueOf(total_meter_reading));
         startActivity(i);
     }
 
